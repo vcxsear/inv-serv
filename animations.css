@@ -1,0 +1,95 @@
+.floating-cards {
+  perspective: 1000px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-background {
+  background: linear-gradient(270deg, #ff7e5f, #feb47b);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particle-animation 1s infinite ease-in-out;
+}
+
+@keyframes particle-animation {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100px); opacity: 0; }
+}
+
+.neon-text {
+  color: #39f;
+  text-shadow: 0 0 5px #39f, 0 0 10px #39f, 0 0 20px #39f;
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.wave {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: #39f;
+  animation: wave-animation 1s infinite alternate;
+}
+
+@keyframes wave-animation {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+.shape {
+  transition: all 0.5s;
+}
+
+.shape.morphed {
+  border-radius: 50%;
+  transform: scale(1.5);
+}
+
+.button {
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ff1493;
+}
